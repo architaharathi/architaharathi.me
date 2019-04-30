@@ -52,7 +52,7 @@ h2 {
 h1{
   font-family: "Arial", Arial, sans-serif;
 }
-h4{
+h2{
   font-family: "Arial", Arial, sans-serif;
 }
 section {
@@ -66,13 +66,13 @@ footer {
   text-align: center;
 }
 div {
-  background: #FFFEB2;
-  background: linear-gradient(#FFFFF0, #FFFEB2);
+  background: #ccffff;
+  background: linear-gradient(#ccffff, #33ffff);
   padding: 22px 0 22px 0;
 }
 p {
   font-family: "Arial", Arial, sans-serif;
-  text-indent: 30px;
+  text-indent: 50px;
 }
 .center {
   display: block;
