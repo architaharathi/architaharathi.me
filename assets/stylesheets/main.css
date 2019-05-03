@@ -1,3 +1,6 @@
+/* I believe I got some of this code from the link below, or a similar site */
+/*https://learn.shayhowe.com/html-css/building-your-first-web-page/*/
+
 html, body, span, applet, object, iframe, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, ins, kbd, q, s, samp,
@@ -24,21 +27,6 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 header {
   text-align: center;
@@ -78,4 +66,10 @@ p {
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+a {
+  background-color: #ffffff;
+}
+a:hover {
+  background-color: yellow;
 }
