@@ -1,10 +1,11 @@
 /* I believe I got some of this code from the link below, or a similar site */
 /*https://learn.shayhowe.com/html-css/building-your-first-web-page/*/
 
-html, body, span, applet, object, iframe, blockquote, pre,
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
-del, dfn, ins, kbd, q, s, samp,
-small, strike, sub, sup, tt, var,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
@@ -20,56 +21,24 @@ time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
 }
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
+
 header {
   text-align: center;
-  margin-top: 0;
-}
-h2 {
-  text-align: center;
-  margin-top: 0;
   font-family: "Arial", Arial, sans-serif;
 }
-h1{
-  font-family: "Arial", Arial, sans-serif;
-}
-h2{
-  font-family: "Arial", Arial, sans-serif;
-}
-section {
-  float: left;
-  width: 28%;
-  margin: 2.5% 2.5% 2.5% 2.5%;
-}
-footer {
-  clear: both;
-  margin-bottom: 0;
-  text-align: center;
-}
-div {
-  background: #ffffff;
-  background: linear-gradient(#ffffff, #ACE6F3);
-  padding: 22px 0 22px 0;
-}
-p {
-  font-family: "Arial", Arial, sans-serif;
-  text-indent: 50px;
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-a {
-  background-color: #ffffff;
-}
-a:hover {
-  background-color: yellow;
-}
+
+.page {
+  text-align: left;
+  background-color: red,
+} 
+
+/* @media screen and (max-width: 400px) {
+  .navbar a {
+    float: none;
+    width: 100%;
+  }
+} */
+
+/* .navbar {
+
+} */
