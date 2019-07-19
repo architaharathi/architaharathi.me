@@ -49,18 +49,23 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
         padding: 50px;
       }
 
+      .work{
+        background-color: #c1fcc1;
+        padding: 50px;
+      }
+
       .activities{
+        background-color: #9DD9D2;
+        padding: 50px;
+      }
+
+      .service{
         background-color: #FFB367;
         padding: 50px;
       }
 
-      .currentprojects{
-        background-color: #F4D06F;
-        padding: 50px;
-      }
-
       .funfacts{
-        background-color: #9DD9D2;
+        background-color: #F4D06F;
         padding: 50px;
       }
 
@@ -81,18 +86,18 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
         font-size: 25px;
       }
 
-      .profilepic{
+      .navswitch{
         position: relative;
         display: inline-block;
       }
 
-      .profilepic .img-top{
+      .navswitch .img-top{
         display: none;
         position: absolute;
         top: 0;
         left: 0;
       }
-      .profilepic:hover .img-top{
+      .navswitch:hover .img-top{
         display: inline;
       }
 
@@ -124,19 +129,42 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
   <div class="navbar">
 
     <!-- profile picture swap when hover -->
-    <a href="#aboutme" class="profilepic">
-      <img src="images/profile_pic2.png" alt="jump" width=350px height=230px>
-      <img src="images/jump5.jpeg" class="img-top" alt="profile" width=350px height=230px>
+    <a href="#aboutme" class="navswitch">
+      <img src="images/prof_sized.jpg" alt="pink" width=420px height=280px>
+      <img src="images/prof_pink.png" class="img-top" alt="profile" width=420px height=280px>
     </a>
 
     <!-- pic of Dartmouth -->
-    <a href="#education"><img src="images/dartmouth.jpeg" width=180 height=230></a>
+    <a href="#education" class="navswitch">
+        <img src="images/ed_sized.jpg" alt="purple" width=420px height=280>
+        <img src="images/ed_purp.png" class="img-top" alt="education" width=420px height=280px>
+
+    </a>
+
+    <!-- pic of MUN -->
+    <a href="#work" class="navswitch">
+      <img src="images/work_sized.jpg" alt="green" width=420 height=280>
+      <img src="images/work_green.png" class="img-top" alt="work" width=420px height=280px>
+    </a>
+
+    <!-- line break in navbar -->
+    <p></p>
+
     <!-- pic of dance -->
-    <a href="#activities"><img src="images/dance2.jpeg" width=340 height=230></a>
+    <a href="#activities" class="navswitch">
+      <img src="images/dance_sized.jpg" width=420 height=280>
+      <img src="images/act_blue.png" class="img-top" alt="act" width=420px height=280px>
+    </a>
     <!-- pic of sings -->
-    <a href="#currentprojects"><img src="images/sings.jpeg" width=330 height=230></a>
+    <a href="#service" class="navswitch">
+      <img src="images/service_sized.jpg" width=420 height=280>
+      <img src="images/serv_or.png" class="img-top" alt="serv" width=420px height=280px>
+    </a>
     <!-- pic of minime -->
-    <a href="#funfacts"><img src="images/little1.jpeg" width=170 height=230></a>
+    <a href="#funfacts" class="navswitch">
+      <img src="images/fun_sized.jpg" width=420 height=280>
+      <img src="images/fun_yellow.png" class="img-top" alt="fun" width=420px height=280px>
+    </a>
   </div>
 
 
@@ -159,7 +187,16 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
     <a id="education"></a>
     <!-- making the class for the styling  -->
     <div class="education">
-    <h2>My Education & Experience</h2>
+    <h2>My Education</h2>
+    </div>
+  </div>
+
+  <div class="page">
+    <!-- providing the id for the link from the picture -->
+    <a id="work"></a>
+    <!-- making the class for the styling  -->
+    <div class="work">
+    <h2>Work Experience</h2>
     </div>
   </div>
 
@@ -168,17 +205,17 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
     <a id="activities"></a>
     <!-- making the class for the styling  -->
     <div class=activities>
-    <h2>Activities & Interests</h2>
+    <h2>Activities & Projects</h2>
     </div>
   </div>
 
 
   <div class="page">
     <!-- providing the id for the link from the picture -->
-    <a id="currentprojects"></a>
+    <a id="service"></a>
     <!-- making the class for the styling  -->
-    <div class="currentprojects">
-    <h2>Current Projects</h2>
+    <div class="service">
+    <h2>Service</h2>
     </div>
   </div>
 
