@@ -1,5 +1,6 @@
 <!-- specific help from
-https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -->
+https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php
+https://www.w3schools.com/css/tryit.asp?filename=trycss_table_border_divider -->
 
 
 
@@ -120,6 +121,25 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
         list-style-type: circle;
       }
 
+      li{
+        font-size: 20px;
+        margin-top: 5px;
+        padding: 5px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      th, td {
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid black;
+        font-size: 20px;
+      }
+
       .footertext{
         font-size: 15px;
         margin-left: 20px;
@@ -198,24 +218,72 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
     <!-- making the class for the styling  -->
     <div class="education">
     <h2>My Education</h2>
-    <h4>Current</h4>
+    <p>Here are some quick stats.</p>
+    <h4>2018-2022</h4>
     <!-- body text -->
     <ul class="school">
-      <p> Dartmouth College, Hanover, NH, GPA 4.0/4.0 June 2022 </p>
-      <li> Bachelor of Arts, Major in Math/Econ/CS </li>
-      <li>Past Coursework: Number Theory, Computer Science 1 in Python, Linear Algebra, and Economics 1</li>
-      <li>Current Coursework: Differential Equations, Economics 10 (Statistics)</li>
-      <li>Honors/Awards: Jack Byrnes Math Scholar, received citation in COSC 1</li>
-      <li>Activities: Dartmouth Sings, Dartmouth Mathematical Society, Smart Woman Securities, Mock Trial </li>
+      <p>Dartmouth College, Hanover, NH, GPA 4.0/4.0</p>
+      <li>Bachelor of Arts: Double Major in Mathematics and Economics,
+      Minor in Computer Science</li>
+      <li>Relevant Coursework:</li>
+        <table>
+          <tr>
+            <th>Mathematics</th>
+            <th>Economics</th>
+            <th>Computer Science</th>
+          </tr>
+          <tr>
+            <td>Number Theory</td>
+            <td>Introduction to Microeconomics</td>
+            <td>Introduction to Computer Science in Python</td>
+          </tr>
+          <tr>
+            <td>Linear Algebra</td>
+            <td>Introductory Statistics</td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>Differential Equations</td>
+            <td>---</td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>Mathematical Biology</td>
+            <td>---</td>
+            <td>---</td>
+          </tr>
+        </table>
+      <li>Honors/Awards: Jack Byrne Math Scholar, Citations in COSC 1,
+        ECON 10</li>
     </ul>
-    <h4>Past</h4>
-    <p> Jesuit High School, Portland, OR, GPA 4.0/4.0 June 2018
-  Honors/Awards: National Merit Scholar Finalist, AP Scholar, with Distinction (2017-18), National AP Scholar (2018), Math
-  Department Award 2015-2018, Mock Trial Team MVP Award, Model United Nations Consensus Builder Award and
-  Undersecretary on Secretariat, Leadership and Offensive Award on JV2 Soccer
-  Activities: Varsity Cheerleading, JV Soccer, Mock Trial Team, Model United Nations Team, Concert Choir, A Capella club Cofounder,
-  Cast in “The Hunchback of Notre Dame” musical, Leader of Math Club, National Honor Society Treasurer, Spanish
-  National Honor Society </p>
+    <h4>2014-2018</h4>
+    <ul class="school">
+    <p>Jesuit High School, Portland, OR, GPA 4.0/4.0 </p>
+      <li>Honors/Awards: Saluatatorian, National Merit Scholar Finalist,
+        AP Scholar, with Distinction (2017-18), National AP Scholar (2018),
+        Math Department Award 2015-2018, Mock Trial Team MVP Award,
+        Model United Nations Consensus Builder Award and Undersecretary
+        on Secretariat, Leadership and Offensive Award on JV2 Soccer,
+        National Honor Society Treasurer, Spanish National Honor Society</li>
+    </ul>
+    <p style="margin-top: 50px">If you happened to briefly glance over that
+      jumble of letters because you have seen it many a time before, or because
+      you are looking for something else, don't worry, I have a bit more.</p>
+    <p style="margin-top: 50px">My education is my most prized possession. I
+      have always been fortunate enough to come from a family that cherishes
+      the right and privilege of having an education. My parents' and older
+      brother's studies have inspired me throughout my life, and I consistenly
+      strive to perform the best that I can given the opportunities that I am
+      lucky to have.</p>
+    <p style="margin-top: 50px">So, to me, my education is not a few words and
+      numbers glued together, but rather it is each experience I gain from my
+      time inside and outside of the classroom. The gift of an education cannot
+      be summed up on a webpage. But I can assure you that some of the most
+      liberating moments of my life have involved solving complex problems and
+      feeling the thrill of learning, or connecting the joy on someone's face to
+      the little flutter I get in my heart when they learn something from
+      me. I hope to continue learning and helping others learn for the rest
+      of my life.</p>
     </div>
   </div>
 
