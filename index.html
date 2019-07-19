@@ -28,6 +28,12 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
 
       .header h4{
         font-size: 25px;
+        font-style: normal;
+      }
+
+      h4 {
+        font-size: 25px;
+        font-style: italic;
       }
 
       .page h2 {
@@ -86,6 +92,7 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
         font-size: 25px;
       }
 
+      /* the next three styles allow the navbar pictures to swap when hovering */
       .navswitch{
         position: relative;
         display: inline-block;
@@ -107,6 +114,10 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
         width: 100%;
         background-color: #ffffff;
         text-align: left;
+      }
+
+      ul.school{
+        list-style-type: circle;
       }
 
       .footertext{
@@ -138,7 +149,6 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
     <a href="#education" class="navswitch">
         <img src="images/ed_sized.jpg" alt="purple" width=420px height=280>
         <img src="images/ed_purp.png" class="img-top" alt="education" width=420px height=280px>
-
     </a>
 
     <!-- pic of MUN -->
@@ -188,6 +198,24 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php -
     <!-- making the class for the styling  -->
     <div class="education">
     <h2>My Education</h2>
+    <h4>Current</h4>
+    <!-- body text -->
+    <ul class="school">
+      <p> Dartmouth College, Hanover, NH, GPA 4.0/4.0 June 2022 </p>
+      <li> Bachelor of Arts, Major in Math/Econ/CS </li>
+      <li>Past Coursework: Number Theory, Computer Science 1 in Python, Linear Algebra, and Economics 1</li>
+      <li>Current Coursework: Differential Equations, Economics 10 (Statistics)</li>
+      <li>Honors/Awards: Jack Byrnes Math Scholar, received citation in COSC 1</li>
+      <li>Activities: Dartmouth Sings, Dartmouth Mathematical Society, Smart Woman Securities, Mock Trial </li>
+    </ul>
+    <h4>Past</h4>
+    <p> Jesuit High School, Portland, OR, GPA 4.0/4.0 June 2018
+  Honors/Awards: National Merit Scholar Finalist, AP Scholar, with Distinction (2017-18), National AP Scholar (2018), Math
+  Department Award 2015-2018, Mock Trial Team MVP Award, Model United Nations Consensus Builder Award and
+  Undersecretary on Secretariat, Leadership and Offensive Award on JV2 Soccer
+  Activities: Varsity Cheerleading, JV Soccer, Mock Trial Team, Model United Nations Team, Concert Choir, A Capella club Cofounder,
+  Cast in “The Hunchback of Notre Dame” musical, Leader of Math Club, National Honor Society Treasurer, Spanish
+  National Honor Society </p>
     </div>
   </div>
 
