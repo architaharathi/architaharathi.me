@@ -1,7 +1,9 @@
 <!-- specific help from
 https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php
 https://www.w3schools.com/css/tryit.asp?filename=trycss_table_border_divider
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline -->
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
+https://codepen.io/shayhowe/pen/Fvjnf-->
 
 
 
@@ -91,7 +93,8 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline -->
       }
 
       .act_pics{
-        text-align:center;
+        text-align: center;
+        height: 1300px;
       }
 
       a.email{
@@ -170,6 +173,37 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline -->
 
       .vlog{
         text-align:center;
+      }
+
+      .col-sport-flip{
+        background-color: transparent;
+        width: 600;
+        height: 400;
+        perspective: 2500px;
+      }
+
+      .col-sport-flip-card{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+      }
+
+      .col-sport-flip:hover .col-sport-flip-card{
+        transform: rotateY(180deg);
+      }
+
+      .col-sport-flip-front{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      .col-sport-flip-back{
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
       }
 
     </style>
@@ -344,17 +378,96 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline -->
     <!-- titles -->
     <h4>College<h4>
     <div class="act_pics">
-      <img src="images/col_sports.png" width=360px height=240px>
-      <img src="images/col_arts.png" width=360px height=240px>
-      <img src="images/col_clubs.png" width=360px height=240px>
+      <!-- flip 1 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/col_sports.png"
+            alt="col-sport-text" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/col_sports_text.png"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 1 end-->
+      <!-- flip 2 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/col_arts.png" style="margin-top:440px" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/col_arts_text.png" style="margin-top:440px"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 2 end-->
+      <!-- flip 3 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/col_club.png" style="margin-top:880px" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/col_clubs_text.png" style="margin-top:880px"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 3 end-->
     </div>
     <!-- titles -->
     <h4>High School<h4>
     <div class="act_pics">
+      <!-- flip 4 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/hs_new_sports.png"
+            alt="col-sport-text" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/hs_sports_text.png"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 4 end-->
+      <!-- flip 5 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/hs_new_arts.png" style="margin-top:440px" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/arts_hs_new.png" style="margin-top:440px"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 5 end-->
+      <!-- flip 6 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/hs_clubs.png" style="margin-top:880px" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/clubs_hs_new.png" style="margin-top:880px"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+    </div>
+        <!-- flip 6 end-->
+    <!-- <div class="act_pics">
       <img src="images/hs_sport.png" width=360px height=240px>
       <img src="images/hs_arts.png" width=360px height=240px>
       <img src="images/hs_clubs.png" width=360px height=240px>
-    </div>
+    </div> -->
     <!-- titles -->
     <h3>Projects</h3>
     <!-- titles -->
@@ -363,7 +476,6 @@ https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline -->
     <h4>Past<h4>
     </div>
   </div>
-
 
   <div class="page">
     <!-- providing the id for the link from the picture -->
