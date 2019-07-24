@@ -3,7 +3,8 @@ https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php
 https://www.w3schools.com/css/tryit.asp?filename=trycss_table_border_divider
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
-https://codepen.io/shayhowe/pen/Fvjnf-->
+https://codepen.io/shayhowe/pen/Fvjnf
+https://css-tricks.com/the-shapes-of-css/-->
 
 
 
@@ -206,6 +207,92 @@ https://codepen.io/shayhowe/pen/Fvjnf-->
         backface-visibility: hidden;
       }
 
+      /* timeline styles */
+      .timeline{
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      /* center line */
+      .timeline::after{
+        content: '';
+        position: absolute;
+        width: 10px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -5px;
+      }
+
+      .container{
+        padding: 10px 40px;
+        position: relative;
+        width: 30%;
+        background-color: white;
+        margin-left: 80px;
+        border-radius: 10px;
+      }
+
+      /* circles */
+      .container::after{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: -95px;
+        background-color: white;
+        top: 12.5px;
+        border-radius: 50%;
+        border: 5px solid white
+        z-index: 1;
+      }
+
+      .left{
+        left: 0;
+      }
+
+      .right{
+        left: 50%;
+      }
+
+      /* arrows */
+      .left::before{
+        content:" ";
+        height: 0;
+        position: absolute;
+        top: 15px;
+        width: 0;
+        z-index: 1;
+        right: -15px;
+        border-top: 15px solid transparent;
+        border-left: 15px solid white;
+        border-bottom: 15px solid transparent;
+      }
+
+      .right::before{
+        content:"";
+        height: 0;
+        position: absolute;
+        top: 15px;
+        width: 0;
+        z-index: 1;
+        left: -15px;
+        border-top: 15px solid transparent;
+        border-right: 15px solid white;
+        border-bottom: 15px solid transparent;
+      }
+
+      .right::after{
+        left: -95px;
+      }
+
+      .timeContent{
+        background-color: white;
+        position: relative;
+      }
+
+
     </style>
   </head>
 
@@ -355,6 +442,46 @@ https://codepen.io/shayhowe/pen/Fvjnf-->
     <!-- making the class for the styling  -->
     <div class="work">
     <h2>Work Experience</h2>
+      <!-- timeline -->
+      <div class="timeline">
+        <div class="container left">
+          <div class="timeContent">
+            <h3>2019</h3>
+            <p>hi</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="timeContent">
+            <h3>2018</h3>
+            <p>jadfksdsdjfsdflsad</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="timeContent">
+            <h3>2017</h3>
+            <p>jadfksdsdjfsdflsad</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="timeContent">
+            <h3>2016</h3>
+            <p>jadfksdsdjfsdflsad</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="timeContent">
+            <h3>2015</h3>
+            <p>jadfksdsdjfsdflsad</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="timeContent">
+            <h3>2014</h3>
+            <p>jadfksdsdjfsdflsad</p>
+          </div>
+        </div>
+      </div>
+      <!-- end timeline -->
     </div>
   </div>
 
@@ -382,7 +509,7 @@ https://codepen.io/shayhowe/pen/Fvjnf-->
       <div class="col-sport-flip">
         <div class="col-sport-flip-card">
           <div class="col-sport-flip-front">
-            <img src="images/col_sports.png"
+            <img src="images/new_col_sport.png"
             alt="col-sport-text" width=600 height=400>
           </div>
           <div class="col-sport-flip-back">
@@ -462,12 +589,7 @@ https://codepen.io/shayhowe/pen/Fvjnf-->
         </div>
       </div>
     </div>
-        <!-- flip 6 end-->
-    <!-- <div class="act_pics">
-      <img src="images/hs_sport.png" width=360px height=240px>
-      <img src="images/hs_arts.png" width=360px height=240px>
-      <img src="images/hs_clubs.png" width=360px height=240px>
-    </div> -->
+    <!-- flip 6 end-->
     <!-- titles -->
     <h3>Projects</h3>
     <!-- titles -->
