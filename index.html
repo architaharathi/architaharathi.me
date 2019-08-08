@@ -107,8 +107,17 @@ https://css-tricks.com/the-shapes-of-css/-->
         color: blue;
       }
 
+      a.top{
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a.top:hover{
+        color: black;
+      }
+
       p {
-        font-size: 25px;
+        font-size: 20px;
       }
 
       .work p{
@@ -297,11 +306,70 @@ https://css-tricks.com/the-shapes-of-css/-->
         position: relative;
       }
 
+      /* .button {
+        display: block;
+        position: fixed;
+        bottom: 100px;
+        right: 5px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        opacity: 0;
+      }
+
+
+      .button:hover {
+        display: block;
+        position: fixed;
+        bottom: 100px;
+        right: 5px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        opacity: 100;
+      } */
+
+      .collapsible {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        font-size: 25px;
+        border: none;
+      }
+
+      .collapsecontent {
+        padding: 0 20px;
+        display: none;
+        overflow: hidden;
+        background-color: white;
+      }
+
+      .active, .collapsible:hover {
+        background-color: #fff7ef;
+      }
+
 
     </style>
   </head>
 
   <body>
+
+  <a name="top"></a>
+
   <div class="header">
       <h1>Archita Harathi</h1>
       <div class="subheader">
@@ -649,6 +717,17 @@ https://css-tricks.com/the-shapes-of-css/-->
     <!-- making the class for the styling  -->
     <div class="service">
     <h2>Service</h2>
+    <button class="collapsible">Service 1</button>
+    <div class="collapsecontent">
+      <p> dksjflkdsjflskjdflksd;fjald;fjldsjflsdkfj </p>
+    </div>
+    <button class="collapsible">Service 1</button>
+    <div class="collapsecontent">
+      <p> dksjflkdsjflskjdflksd;fjald;fjldsjflsdkfj </p>
+    </div>
+    <button class="collapsible">Service 1</button>
+    <div class="collapsecontent">
+      <p> dksjflkdsjflskjdflksd;fjald;fjldsjflsdkfj </p>
     </div>
   </div>
 
@@ -720,5 +799,44 @@ https://css-tricks.com/the-shapes-of-css/-->
     <div class="footertext">503-915-7105</div>
   </div>
 
+  <div class="button">
+    <a href="#top" class="top">Back to Top!</a>
+  </div>
+
+
+  <!-- <button onlick="topFunction()" id="button" title="go to top">Back to Top!</button> -->
+
   </body>
+
+  <script>
+    var coll = document.getElementsByClassName("collapsible")
+    var i;
+
+    for (i = 0; i < coll.length; i++) {
+      coll[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var collapsecontent = this.nextElementSibling;
+        if (collapsecontent.style.display === "block") {
+          collapsecontent.style.display = "none";
+        } else {
+          collapsecontent.style.display = "block";
+        }
+      });
+    }
+    // window.onscroll = function() {scrollFunction()};
+    //
+    // function scrollFunction() {
+    //   if (document.body.scrollTop) > 50 || document.documentElement.scrollTop > 50) {
+    //     document.getElementById("button").style.display = "block";
+    //   } else {
+    //     document.getElementById("button").style.display = "none";
+    //   }
+    //
+    // function topFunction() {
+    //   document.body.scrollTop = 0;
+    //   document.documentElement.scrollTop = 0;
+    // }
+
+  </script>
+
 </hmtl>
