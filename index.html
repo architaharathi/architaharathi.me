@@ -4,7 +4,10 @@ https://www.w3schools.com/css/tryit.asp?filename=trycss_table_border_divider
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline
 https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
 https://codepen.io/shayhowe/pen/Fvjnf
-https://css-tricks.com/the-shapes-of-css/-->
+https://css-tricks.com/the-shapes-of-css/
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible
+https://stackoverflow.com/questions/32102747/how-to-make-a-back-to-top-button-using-css-and-html-only
+https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
 
 
 
@@ -339,8 +342,20 @@ https://css-tricks.com/the-shapes-of-css/-->
         opacity: 100;
       } */
 
-      .collapsible {
+      .collapsible1 {
         background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        font-size: 25px;
+        border: none;
+      }
+
+      .collapsible2 {
+        background-color: #fff7ef;
         color: black;
         cursor: pointer;
         padding: 20px;
@@ -358,7 +373,11 @@ https://css-tricks.com/the-shapes-of-css/-->
         background-color: white;
       }
 
-      .active, .collapsible:hover {
+      .active, .collapsible1:hover {
+        background-color: #fff7ef;
+      }
+
+      .active, .collapsible2:hover {
         background-color: #fff7ef;
       }
 
@@ -717,15 +736,15 @@ https://css-tricks.com/the-shapes-of-css/-->
     <!-- making the class for the styling  -->
     <div class="service">
     <h2>Service</h2>
-    <button class="collapsible">Service 1</button>
+    <button class="collapsible1">Service 1</button>
     <div class="collapsecontent">
       <p> dksjflkdsjflskjdflksd;fjald;fjldsjflsdkfj </p>
     </div>
-    <button class="collapsible">Service 1</button>
+    <button class="collapsible2">Service 1</button>
     <div class="collapsecontent">
-      <p> dksjflkdsjflskjdflksd;fjald;fjldsjflsdkfj </p>
+      <p> dkhi </p>
     </div>
-    <button class="collapsible">Service 1</button>
+    <button class="collapsible1">Service 1</button>
     <div class="collapsecontent">
       <p> dksjflkdsjflskjdflksd;fjald;fjldsjflsdkfj </p>
     </div>
@@ -809,11 +828,26 @@ https://css-tricks.com/the-shapes-of-css/-->
   </body>
 
   <script>
-    var coll = document.getElementsByClassName("collapsible")
+    var coll1 = document.getElementsByClassName("collapsible1")
     var i;
 
-    for (i = 0; i < coll.length; i++) {
-      coll[i].addEventListener("click", function() {
+    for (i = 0; i < coll1.length; i++) {
+      coll1[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var collapsecontent = this.nextElementSibling;
+        if (collapsecontent.style.display === "block") {
+          collapsecontent.style.display = "none";
+        } else {
+          collapsecontent.style.display = "block";
+        }
+      });
+    }
+
+    var coll2 = document.getElementsByClassName("collapsible2")
+    var i;
+
+    for (i = 0; i < coll2.length; i++) {
+      coll2[i].addEventListener("click", function() {
         this.classList.toggle("active");
         var collapsecontent = this.nextElementSibling;
         if (collapsecontent.style.display === "block") {
