@@ -48,6 +48,14 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
         font-size: 30px;
       }
 
+      tr:nth-child(even) {
+        background-color: white;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #eee9ff;
+      }
+
       .page h2 {
         text-align: left;
         font-size: 40px;
@@ -164,7 +172,7 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
       th, td {
         padding: 20px;
         text-align: left;
-        border-bottom: 1px solid black;
+        /* border-bottom: 1px solid black; */
         font-size: 20px;
       }
 
@@ -350,20 +358,24 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
         width: 100%;
         text-align: left;
         outline: none;
-        font-size: 25px;
-        border: none;
+        font-size: 20px;
+        border-top: 1px black;
       }
 
-      .collapsible2 {
-        background-color: #fff7ef;
+      /* .collapsible2 {
+        background-color: white;
         color: black;
         cursor: pointer;
         padding: 20px;
         width: 100%;
         text-align: left;
         outline: none;
-        font-size: 25px;
-        border: none;
+        font-size: 20px;
+        border-top: 1px black;
+      } */
+
+      .collapsecontent li{
+        font-size: 15px;
       }
 
       .collapsecontent {
@@ -424,17 +436,20 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
     <!-- pic of dance -->
     <a href="#activities" class="navswitch">
       <img src="images/dance_sized.jpg" width=420 height=280>
-      <img src="images/act_blue.png" class="img-top" alt="act" width=420px height=280px>
+      <img src="images/act_blue.png" class="img-top" alt="act" width=420px
+      height=280px>
     </a>
     <!-- pic of sings -->
     <a href="#service" class="navswitch">
       <img src="images/service_sized.jpg" width=420 height=280>
-      <img src="images/serv_or.png" class="img-top" alt="serv" width=420px height=280px>
+      <img src="images/serv_or.png" class="img-top" alt="serv" width=420px
+      height=280px>
     </a>
     <!-- pic of minime -->
     <a href="#funfacts" class="navswitch">
       <img src="images/fun_sized.jpg" width=420 height=280>
-      <img src="images/fun_yell.png" class="img-top" alt="fun" width=420px height=280px>
+      <img src="images/fun_yell.png" class="img-top" alt="fun" width=420px
+      height=280px>
     </a>
   </div>
 
@@ -445,8 +460,8 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
     <!-- making the class for the styling  -->
     <div class="aboutme">
     <h2>About Me</h2>
-    <p> I am a second-year undergraduate student, interested in
-      computer science, mathematics, and economics at Dartmouth College in
+    <p> I am a second-year undergraduate student, interested in mathematics,
+      computer science, and economics at Dartmouth College in
       Hanover, New Hampshire. I was born and brought up in Portland,
       Oregon. I am a singer, dancer, coder, designer, author, runner, vlogger,
       (mock) lawyer, dreamer, and thinker. Welcome to my world!</p>
@@ -580,8 +595,8 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
           <div class="timeContent">
             <h3>Mathnasium</h3>
             <h4>October 2017-July 2018</h4>
-            <p><strong>Description:</strong> Math tutor for children at learning
-              center.</p>
+            <p><strong>Description:</strong> Math tutor for children at
+              learning center.</p>
           </div>
         </div>
         <div class="container right">
@@ -609,7 +624,7 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
     <!-- <p>Because there is a lot of stuff in this section--not because I am
       "distracted" or "can't focus" or "aimless," but more so because I gain
       pleasure in trying new things and challenging myself.</p> -->
-    <p> Each and everything on this list here and on the list of my life means
+    <p> Each and every thing on this list here and in my life means
       something to and makes me who I am.</p>
     <p>Buckle up, because this is a wild ride.</p>
     <!-- titles -->
@@ -635,7 +650,8 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
       <div class="col-sport-flip">
         <div class="col-sport-flip-card">
           <div class="col-sport-flip-front">
-            <img src="images/col_arts.png" style="margin-top:440px" width=600 height=400>
+            <img src="images/col_arts.png" style="margin-top:440px" width=600
+            height=400>
           </div>
           <div class="col-sport-flip-back">
             <img src="images/col_arts_text.png" style="margin-top:440px"
@@ -707,17 +723,18 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
     <!-- titles -->
     <h4>Current</h4>
       <p><strong>2019 - This website!!</strong></p>
-      <p>It started out as my website-from-scratch  application for the DALI Lab
-        at Dartmouth as a Developer, but since then I have revamped and
+      <p>This website started out as my website-from-scratch  application for
+        the Dartmouth DALI Lab as a Developer, but since then I have revamped and
         reconstructed the site to be applicable for a wider range of uses, aka
         telling the Interwebs about me!!</p>
-      <p>I have throughly enjoyed learning CSS and HTML through my own experiences (and not
-        necessarily a classroom), and getting a real place to apply my design skills.</p>
+      <p>I have throughly enjoyed learning CSS and HTML through my own endeavors (and not
+        necessarily a classroom), and getting a real place to apply my design
+        skills.</p>
     <!-- titles -->
     <h4>Past</h4>
       <p><strong>2017 - A book!!</strong></p>
       <p>In the beginning of my senior year of high school, I published a book
-        describing my life as an Indian-American teenager called <i>Crayon Box</i>
+        called <i>Crayon Box,</i> describing my life as an Indian-American teenager.
         <a href="https://www.amazon.com/Crayon-Box-Archita-Harathi/dp/1549712918"
          class="email">(on Amazon).</a>
       <p> To me, publishing was not even the best part! I was able to take my
@@ -736,17 +753,47 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
     <!-- making the class for the styling  -->
     <div class="service">
     <h2>Service</h2>
-    <button class="collapsible1">Service 1</button>
+    <h4>Current</h4>
+    <button class="collapsible1"><strong>Dance Teaching and Donation</strong><i>, 2019</i></button>
     <div class="collapsecontent">
-      <p> dksjflkdsjflskjdflksd;fjald;fjldsjflsdkfj </p>
+      <li>Teaching dance to local kids in Hanover, raising money to donate</li>
     </div>
-    <button class="collapsible2">Service 1</button>
+    <button class="collapsible1"><strong>Oregon Food Bank</strong><i>, 2018 - Present</i></button>
     <div class="collapsecontent">
-      <p> dkhi </p>
+      <li>Regular volunteer at food bank in Portland, Oregon during school holidays</li>
     </div>
-    <button class="collapsible1">Service 1</button>
+    <h4>Past</h4>
+    <button class="collapsible1"><strong>Ignatian Teach-In</strong><i>, 2016 - 2018</i></button>
     <div class="collapsecontent">
-      <p> dksjflkdsjflskjdflksd;fjald;fjldsjflsdkfj </p>
+      <li>Attended Ignatian Teach-In and advocated to Oregon representatives
+        about immigration reform in Washington, DC.</li>
+      <li>Organized and taught a group of 20 students about advocacy for the
+        Teach-In at Jesuit High School.</li>
+      <li>Led a refugee simulation at Jesuit to educate students about refugee camps</li>
+    </div>
+    <button class="collapsible1"><strong>Kumon Math and Reading</strong><i>, 2016 - 2017</i></button>
+    <div class="collapsecontent">
+      <li>Volunteered at Kumon Math and Reading, helping students with
+        mathematical and reading concepts</li>
+    </div>
+    <button class="collapsible1"><strong>Gowtham Model School</strong><i>, Summer 2017</i></button>
+    <div class="collapsecontent">
+      <li>Volunteered at a local school in Hyderabad as a dance teacher,
+        teaching 4th – 8th grade students various dance styles</li>
+    </div>
+    <button class="collapsible1"><strong>Youth For Seva</strong><i>, Summer 2017</i></button>
+    <div class="collapsecontent">
+      <li>Taught after school math class to sixth graders at a government-funded
+        school, helping students read big numbers in English</li>
+    </div>
+    <button class="collapsible1"><strong>Camp Rivendale</strong><i>, Summer 2016</i></button>
+    <div class="collapsecontent">
+      <li>Volunteered for 65 hours at a summer camp for children with disabilities</li>
+    </div>
+    <button class="collapsible1"><strong>SEWA International</strong><i>, 2016</i></button>
+    <div class="collapsecontent">
+      <li>Created and led my own dance fundraiser for the Tamilnadu Floods,
+        working with SEWA International, raising $4,700+</li>
     </div>
   </div>
 
@@ -843,20 +890,20 @@ https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
       });
     }
 
-    var coll2 = document.getElementsByClassName("collapsible2")
-    var i;
-
-    for (i = 0; i < coll2.length; i++) {
-      coll2[i].addEventListener("click", function() {
-        this.classList.toggle("active");
-        var collapsecontent = this.nextElementSibling;
-        if (collapsecontent.style.display === "block") {
-          collapsecontent.style.display = "none";
-        } else {
-          collapsecontent.style.display = "block";
-        }
-      });
-    }
+    // var coll2 = document.getElementsByClassName("collapsible2")
+    // var i;
+    //
+    // for (i = 0; i < coll2.length; i++) {
+    //   coll2[i].addEventListener("click", function() {
+    //     this.classList.toggle("active");
+    //     var collapsecontent = this.nextElementSibling;
+    //     if (collapsecontent.style.display === "block") {
+    //       collapsecontent.style.display = "none";
+    //     } else {
+    //       collapsecontent.style.display = "block";
+    //     }
+    //   });
+    // }
     // window.onscroll = function() {scrollFunction()};
     //
     // function scrollFunction() {
