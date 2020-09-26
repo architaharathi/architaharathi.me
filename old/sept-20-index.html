@@ -1,0 +1,943 @@
+<!-- specific help from
+https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php
+https://www.w3schools.com/css/tryit.asp?filename=trycss_table_border_divider
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
+https://codepen.io/shayhowe/pen/Fvjnf
+https://css-tricks.com/the-shapes-of-css/
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible
+https://stackoverflow.com/questions/32102747/how-to-make-a-back-to-top-button-using-css-and-html-only
+https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
+
+
+
+
+ <!DOCTYPE html>
+ <hmtl>
+
+  <head>
+    <title>architaharathi.me</title>
+    <!-- <link rel="stylesheet" href="assets/stylesheets/main.css"> -->
+    <style type = "text/css">
+
+      * {
+        font-family: "Arial", Arial, sans-serif;
+      }
+
+      .header {
+        text-align: center;
+        font-family: "Arial", Arial, sans-serif;
+        padding: 100px;
+      }
+
+      .header h1{
+        font-size: 110px;
+      }
+
+      .header h4{
+        font-size: 25px;
+        font-style: normal;
+      }
+
+      h4 {
+        font-size: 25px;
+        font-style: italic;
+      }
+
+      h3 {
+        font-size: 30px;
+      }
+
+      tr:nth-child(even) {
+        background-color: white;
+      }
+
+      tr:nth-child(odd) {
+        background-color: #eee9ff;
+      }
+
+      .page h2 {
+        text-align: left;
+        font-size: 40px;
+      }
+
+      .page {
+        margin-top: 20px;
+      }
+
+      .aboutme{
+        background-color: #FFC9F9;
+        padding: 50px;
+      }
+
+      .education{
+        background-color: #dacfff;
+        padding: 50px;
+      }
+
+      .work{
+        background-color: #c1fcc1;
+        padding: 50px;
+      }
+
+      .activities{
+        background-color: #9DD9D2;
+        padding: 50px;
+      }
+
+      .service{
+        background-color: #FFB367;
+        padding: 50px;
+      }
+
+      .funfacts{
+        background-color: #fefba8;
+        padding: 50px;
+      }
+
+      .ending{
+        padding: 50px;
+        text-align: center;
+      }
+
+      .navbar{
+        text-align: center;
+      }
+
+      .act_pics{
+        text-align: center;
+        height: 1300px;
+      }
+
+      a.email{
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a.email:hover{
+        color: blue;
+      }
+
+      a.top{
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a.top:hover{
+        color: black;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .work p{
+        font-size: 20px;
+      }
+
+      /* the next three styles allow the navbar pictures to swap when hovering */
+      .navswitch{
+        position: relative;
+        display: inline-block;
+      }
+
+      .navswitch .img-top{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .navswitch:hover .img-top{
+        display: inline;
+      }
+
+      ul.school{
+        list-style-type: circle;
+      }
+
+      li{
+        font-size: 20px;
+        margin-top: 5px;
+        padding: 5px;
+        line-height: 25px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+        table-layout: fixed;
+      }
+
+      th, td {
+        padding: 20px;
+        text-align: left;
+        /* border-bottom: 1px solid black; */
+        font-size: 20px;
+      }
+
+      .footertext{
+        font-size: 15px;
+        margin-left: 20px;
+        line-height: 45px;
+      }
+
+      .footer{
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        background-color: #ffffff;
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 1;
+      }
+
+      .jumping{
+        text-align:center;
+      }
+
+      .vlog{
+        text-align:center;
+      }
+
+      .col-sport-flip{
+        background-color: transparent;
+        width: 600;
+        height: 400;
+        perspective: 2500px;
+      }
+
+      .col-sport-flip-card{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.5s;
+        transform-style: preserve-3d;
+      }
+
+      .col-sport-flip:hover .col-sport-flip-card{
+        transform: rotateY(180deg);
+      }
+
+      .col-sport-flip-front{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+
+      .col-sport-flip-back{
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+      }
+
+      /* timeline styles */
+      .timeline{
+        position: relative;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      /* center line */
+      .timeline::after{
+        content: '';
+        position: absolute;
+        width: 10px;
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        margin-left: -5px;
+      }
+
+      .container{
+        padding: 10px 40px;
+        position: relative;
+        width: 30%;
+        background-color: white;
+        margin-left: 80px;
+        border-radius: 10px;
+      }
+
+      /* circles */
+      .container::after{
+        content: '';
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        right: -95px;
+        background-color: white;
+        top: 12.5px;
+        border-radius: 50%;
+        border: 5px solid white
+        z-index: 1;
+      }
+
+      .left{
+        left: 0;
+      }
+
+      .right{
+        left: 50%;
+      }
+
+      /* arrows */
+      .left::before{
+        content:" ";
+        height: 0;
+        position: absolute;
+        top: 15px;
+        width: 0;
+        z-index: 1;
+        right: -15px;
+        border-top: 15px solid transparent;
+        border-left: 15px solid white;
+        border-bottom: 15px solid transparent;
+      }
+
+      .right::before{
+        content:"";
+        height: 0;
+        position: absolute;
+        top: 15px;
+        width: 0;
+        z-index: 1;
+        left: -15px;
+        border-top: 15px solid transparent;
+        border-right: 15px solid white;
+        border-bottom: 15px solid transparent;
+      }
+
+      .right::after{
+        left: -95px;
+      }
+
+      .timeContent{
+        background-color: white;
+        position: relative;
+      }
+
+      /* .button {
+        display: block;
+        position: fixed;
+        bottom: 100px;
+        right: 5px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        opacity: 0;
+      }
+
+
+      .button:hover {
+        display: block;
+        position: fixed;
+        bottom: 100px;
+        right: 5px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 10px;
+        border-radius: 5px;
+        opacity: 100;
+      } */
+
+      .collapsible1 {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        border-top: 1px black;
+      }
+
+      /* .collapsible2 {
+        background-color: white;
+        color: black;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        text-align: left;
+        outline: none;
+        font-size: 20px;
+        border-top: 1px black;
+      } */
+
+      .collapsecontent li{
+        font-size: 15px;
+      }
+
+      .collapsecontent {
+        padding: 0 20px;
+        display: none;
+        overflow: hidden;
+        background-color: white;
+      }
+
+      .active, .collapsible1:hover {
+        background-color: #fff7ef;
+      }
+
+      .active, .collapsible2:hover {
+        background-color: #fff7ef;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+  <a name="top"></a>
+
+  <div class="header">
+      <h1>Archita Harathi</h1>
+      <div class="subheader">
+        <h4>Portland, OR   |
+        <a href="mailto:archita.n.harathi.22@dartmouth.edu"
+        class="email">archita.n.harathi.22@dartmouth.edu</a> | 503-915-7105</h4>
+      </div>
+  </div>
+
+  <div class="navbar">
+
+    <!-- profile picture swap when hover -->
+    <a href="#aboutme" class="navswitch">
+      <img src="images/prof_sized.jpg" alt="pink" width=420px height=280px>
+      <img src="images/prof_pink.png" class="img-top" alt="profile" width=420px height=280px>
+    </a>
+
+    <!-- pic of Dartmouth -->
+    <a href="#education" class="navswitch">
+        <img src="images/ed_sized.jpg" alt="purple" width=420px height=280>
+        <img src="images/ed_purp.png" class="img-top" alt="education" width=420px height=280px>
+    </a>
+
+    <!-- pic of MUN -->
+    <a href="#work" class="navswitch">
+      <img src="images/work_sized.jpg" alt="green" width=420 height=280>
+      <img src="images/work_green.png" class="img-top" alt="work" width=420px height=280px>
+    </a>
+
+    <!-- line break in navbar -->
+    <p></p>
+
+    <!-- pic of dance -->
+    <a href="#activities" class="navswitch">
+      <img src="images/dance_sized.jpg" width=420 height=280>
+      <img src="images/act_blue.png" class="img-top" alt="act" width=420px
+      height=280px>
+    </a>
+    <!-- pic of sings -->
+    <a href="#service" class="navswitch">
+      <img src="images/service_sized.jpg" width=420 height=280>
+      <img src="images/serv_or.png" class="img-top" alt="serv" width=420px
+      height=280px>
+    </a>
+    <!-- pic of minime -->
+    <a href="#funfacts" class="navswitch">
+      <img src="images/fun_sized.jpg" width=420 height=280>
+      <img src="images/fun_yell.png" class="img-top" alt="fun" width=420px
+      height=280px>
+    </a>
+  </div>
+
+
+  <div class="page">
+    <!-- providing the id for the link from the picture -->
+    <a id="aboutme"></a>
+    <!-- making the class for the styling  -->
+    <div class="aboutme">
+    <h2>About Me</h2>
+    <p> I am a second-year undergraduate student, interested in mathematics,
+      computer science, and economics at Dartmouth College in
+      Hanover, New Hampshire. I was born and brought up in Portland,
+      Oregon. I am a singer, dancer, coder, designer, author, runner, vlogger,
+      (mock) lawyer, dreamer, and thinker. Welcome to my world! Buckle up,
+      because this is a wild ride.</p>
+    </div>
+  </div>
+
+  <div class="page">
+    <!-- providing the id for the link from the picture -->
+    <a id="education"></a>
+    <!-- making the class for the styling  -->
+    <div class="education">
+    <h2>My Education</h2>
+    <p>Here are some quick stats.</p>
+    <h4>2018-2022</h4>
+    <!-- body text -->
+    <ul class="school">
+      <p>Dartmouth College, Hanover, NH</p>
+      <li>Bachelor of Arts: Double Major in Mathematics and Economics,
+      Minor in Computer Science</li>
+      <li>Relevant Coursework:</li>
+        <table>
+          <tr>
+            <th>Mathematics</th>
+            <th>Economics</th>
+            <th>Computer Science</th>
+          </tr>
+          <tr>
+            <td>Number Theory</td>
+            <td>Introduction to Microeconomics</td>
+            <td>Introduction to Computer Science in Python</td>
+          </tr>
+          <tr>
+            <td>Linear Algebra</td>
+            <td>Introductory Statistics</td>
+            <td>Object-Oriented Programming in Java</td>
+          </tr>
+          <tr>
+            <td>Differential Equations</td>
+            <td>---</td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>Mathematical Biology</td>
+            <td>---</td>
+            <td>---</td>
+          </tr>
+          <tr>
+            <td>Abstract Algebra</td>
+            <td>---</td>
+            <td>---</td>
+          </tr>
+        </table>
+      <li>Honors/Awards: Jack Byrne Math Scholar, Rufus Choate Scholar 2018-2019,
+         Citations in COSC 1, COSC 10, ECON 10</li>
+    </ul>
+    <h4>2014-2018</h4>
+    <ul class="school">
+    <p>Jesuit High School, Portland, OR, GPA 4.0/4.0 </p>
+      <li>Honors/Awards: Saluatatorian, National Merit Scholar Finalist,
+        AP Scholar, with Distinction (2017-18), National AP Scholar (2018),
+        Math Department Award 2015-2018, Mock Trial Team MVP Award,
+        Model United Nations Consensus Builder Award and Undersecretary
+        on Secretariat, Leadership and Offensive Award on JV2 Soccer,
+        National Honor Society Treasurer, Spanish National Honor Society</li>
+    </ul>
+    <!-- <p style="margin-top: 50px">If you happened to briefly glance over that
+      jumble of letters because you have seen it many a time before, or because
+      you are looking for something else, don't worry, I have a bit more.</p>
+    <p style="margin-top: 50px">My education is my most prized possession. I
+      have always been fortunate enough to come from a family that cherishes
+      the right and privilege of having an education. My parents' and older
+      brother's studies have inspired me throughout my life, and I consistenly
+      strive to perform the best that I can given the opportunities that I am
+      lucky to have.</p>
+    <p style="margin-top: 50px">So, to me, my education is not a few words and
+      numbers glued together, but rather it is each experience I gain from my
+      time inside and outside of the classroom. The gift of an education cannot
+      be summed up on a webpage. But I can assure you that some of the most
+      liberating moments of my life have involved solving complex problems and
+      feeling the thrill of learning, or connecting the joy on someone's face to
+      the little flutter I get in my heart when they learn something from
+      me. I hope to continue learning and helping others learn for the rest
+      of my life.</p> -->
+    </div>
+  </div>
+
+  <div class="page">
+    <!-- providing the id for the link from the picture -->
+    <a id="work"></a>
+    <!-- making the class for the styling  -->
+    <div class="work">
+    <h2>Work Experience</h2>
+      <!-- timeline -->
+      <div class="timeline">
+        <div class="container right">
+          <div class="timeContent">
+            <h3>DALI Lab</h3>
+            <h4>Sept 2019-Current</h4>
+            <p><strong>Description:</strong> Digital Designer at the DALI Lab at
+              Dartmouth during the term.</p>
+            <p><strong>Tools:</strong> Figma, Notion, Zenhub</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="timeContent">
+            <h3>Math Research: British Antarctic Survey</h3>
+            <h4>August 2019</h4>
+            <p><strong>Description:</strong> In Cambridge, UK at the British
+              Antarctic Survey, working with Irena Vankova, in analyzing data
+              from Greenland fjords and ocean temperatures.</p>
+            <p><strong>Tools:</strong> Matlab</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="timeContent">
+            <h3>Newmark Knight Frank</h3>
+            <h4>June-August 2019</h4>
+            <p><strong>Description:</strong> Summer Internship in the Investment
+              Sales team of the Pacific Northwest Capital Markets  Division.</p>
+            <p><strong>Tools:</strong> Microsoft Excel, Argus Enterprise, Salesforce,
+              Costar, Adobe InDesign</p>
+          </div>
+        </div>
+        <div class="container left">
+          <div class="timeContent">
+            <h3>WISP Intern: DALI Lab</h3>
+            <h4>January-May 2019</h4>
+            <p><strong>Description:</strong> Women in Science Project
+              Intern with Dartmouth's Computer Science Lab. Learned to code,
+              design, develop a mobile application.</p>
+            <p><strong>Tools:</strong> Figma, GitHub, VS Code, React Native,
+              Firebase</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="timeContent">
+            <h3>Everly</h3>
+            <h4>December 2018</h4>
+            <p><strong>Description:</strong> Operations Intern for paid
+              short-term project.</p>
+            <p><strong>Tools:</strong> Salesforce, Slack
+          </div>
+        </div>
+        <div class="container left">
+          <div class="timeContent">
+            <h3>Mathnasium</h3>
+            <h4>October 2017-July 2018</h4>
+            <p><strong>Description:</strong> Math tutor for children at
+              learning center.</p>
+          </div>
+        </div>
+        <div class="container right">
+          <div class="timeContent">
+            <h3>ClientJoy</h3>
+            <h4>June-July 2016</h4>
+            <p><strong>Description:</strong> Marketing Intern at corporate
+              gifting startup in Portland, OR.</p>
+          </div>
+        </div>
+      </div>
+      <!-- end timeline -->
+    </div>
+  </div>
+
+  <div class="page">
+    <!-- providing the id for the link from the picture -->
+    <a id="activities"></a>
+    <!-- making the class for the styling  -->
+    <div class=activities>
+    <!-- titles -->
+    <h2>Activities & Projects</h2>
+    <!-- <p>Hi. Are you ready?</p>
+    <p>No, really. Are you?</p> -->
+    <!-- <p>Because there is a lot of stuff in this section--not because I am
+      "distracted" or "can't focus" or "aimless," but more so because I gain
+      pleasure in trying new things and challenging myself.</p> -->
+    <p> Each and every thing on this list here and in my life means
+      something to me and makes me who I am.</p>
+    <!-- titles -->
+    <h3>Activites</h3>
+    <!-- titles -->
+    <h4>College<h4>
+    <div class="act_pics">
+      <!-- flip 1 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/new_col_sport.png"
+            alt="col-sport-text" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/col_sports_text.png"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 1 end-->
+      <!-- flip 2 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/col_arts.png" style="margin-top:440px" width=600
+            height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/col_arts_text.png" style="margin-top:440px"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 2 end-->
+      <!-- flip 3 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/col_club.png" style="margin-top:880px" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/col_clubs_text.png" style="margin-top:880px"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 3 end-->
+    </div>
+    <!-- titles -->
+    <h4>High School<h4>
+    <div class="act_pics">
+      <!-- flip 4 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/hs_new_sports.png"
+            alt="col-sport-text" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/hs_sports_text.png"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 4 end-->
+      <!-- flip 5 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/hs_new_arts.png" style="margin-top:440px" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/arts_hs_new.png" style="margin-top:440px"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+      <!-- flip 5 end-->
+      <!-- flip 6 beginning-->
+      <div class="col-sport-flip">
+        <div class="col-sport-flip-card">
+          <div class="col-sport-flip-front">
+            <img src="images/hs_clubs.png" style="margin-top:880px" width=600 height=400>
+          </div>
+          <div class="col-sport-flip-back">
+            <img src="images/clubs_hs_new.png" style="margin-top:880px"
+            alt="col-sport" width=600 height=400>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- flip 6 end-->
+    <!-- titles -->
+    <h3>Projects</h3>
+    <!-- titles -->
+    <h4>Current</h4>
+      <p><strong>2019 - mile$</strong></p>
+      <p>This past fall, I pitched a web and mobile application called mile$, a
+      way to raise money for charities through running.</p>
+      <p>I am currently working on making it come to life.</p>
+
+      <p><strong>2019 - This website!!</strong></p>
+      <p>This website started out as my website-from-scratch application for
+        the Dartmouth DALI Lab as a Developer, but since then I have revamped and
+        reconstructed the site to be applicable for a wider range of uses, aka
+        telling the Interwebs about me!!</p>
+      <p>I have throughly enjoyed learning CSS and HTML through my own endeavors (and not
+        necessarily a classroom), and getting a real place to apply my design
+        skills.</p>
+    <!-- titles -->
+    <h4>Past</h4>
+      <p><strong>2017 - A book!!</strong></p>
+      <p>In the beginning of my senior year of high school, I published a book
+        called <i>Crayon Box,</i> describing my life as an Indian-American teenager.
+        <a href="https://www.amazon.com/Crayon-Box-Archita-Harathi/dp/1549712918"
+         class="email">(on Amazon).</a>
+      <p> To me, publishing was not even the best part! I was able to take my
+        book to my old middle school and also to my high school staff, where I
+        presented to bring awareness of the experiences I underwent as a
+        first-generation American influenced by media and what society says is
+        "beautiful". It was the perfect way for me to give back to my wonderful
+        communities and to hopefully inspire and pave the way for future
+        generations (or their educators!) to change how society accepts diversity.</p>
+    </div>
+  </div>
+
+  <div class="page">
+    <!-- providing the id for the link from the picture -->
+    <a id="service"></a>
+    <!-- making the class for the styling  -->
+    <div class="service">
+    <h2>Service</h2>
+    <h4>Current</h4>
+    <button class="collapsible1"><strong>Dance Teaching and Donation</strong><i>, 2019</i></button>
+    <div class="collapsecontent">
+      <li>Teaching Indian Classical dance to local kids in Hanover, New Hampshire,
+        raising money to donate</li>
+    </div>
+    <button class="collapsible1"><strong>Oregon Food Bank</strong><i>, 2018 - Present</i></button>
+    <div class="collapsecontent">
+      <li>Regular volunteer at the Oregon Food Bank in Portland, Oregon during school holidays</li>
+    </div>
+    <h4>Past</h4>
+    <button class="collapsible1"><strong>Ignatian Teach-In</strong><i>, 2016 - 2018</i></button>
+    <div class="collapsecontent">
+      <li>Attended Ignatian Teach-In and advocated to Oregon representatives
+        about immigration reform in Washington, DC.</li>
+      <li>Organized and taught a group of 20 students about advocacy for the
+        Teach-In at Jesuit High School.</li>
+      <li>Led a refugee simulation at Jesuit to educate students about refugee camps</li>
+    </div>
+    <button class="collapsible1"><strong>Kumon Math and Reading</strong><i>, 2016 - 2017</i></button>
+    <div class="collapsecontent">
+      <li>Volunteered at Kumon Math and Reading, helping students with
+        mathematics and reading concepts</li>
+    </div>
+    <button class="collapsible1"><strong>Gowtham Model School</strong><i>, Summer 2017</i></button>
+    <div class="collapsecontent">
+      <li>Volunteered at a local school in Hyderabad, India as a dance teacher,
+        teaching 4th – 8th grade students various dance styles</li>
+    </div>
+    <button class="collapsible1"><strong>Youth For Seva</strong><i>, Summer 2017</i></button>
+    <div class="collapsecontent">
+      <li>Taught after school math class to sixth graders at a government-funded
+        school in Hyderabad, India, helping students read big numbers in English</li>
+    </div>
+    <button class="collapsible1"><strong>Camp Rivendale</strong><i>, Summer 2016</i></button>
+    <div class="collapsecontent">
+      <li>Volunteered for 65 hours at a summer camp for children with disabilities</li>
+    </div>
+    <button class="collapsible1"><strong>SEWA International</strong><i>, 2016</i></button>
+    <div class="collapsecontent">
+      <li>Created and led my own dance fundraiser for the Tamilnadu Floods,
+        working with SEWA International, raising $4,700+</li>
+    </div>
+  </div>
+
+
+  <div class="page">
+    <!-- providing the id for the link from the picture -->
+    <a id="funfacts"></a>
+    <!-- making the class for the styling  -->
+    <div class="funfacts">
+    <h2>Fun Facts</h2>
+    <p>It's time for some fun factzzz!!!</p>
+    <p> <strong>hehe</strong></p>
+    <p>I like to jump!! In different places!! And take pictures!!</p>
+    <div class="jumping">
+      <img src="images/jump1.jpg" width=200 height=200>
+      <img src="images/jump2.jpg" width=200 height=200>
+      <img src="images/jump3.jpg" width=200 height=200>
+      <img src="images/jump4.jpg" width=200 height=200>
+      <img src="images/jump5.jpg" width=200 height=200>
+      <img src="images/jump6.jpg" width=200 height=200>
+      <img src="images/jump7.jpg" width=200 height=200>
+      <img src="images/jump8.jpg" width=200 height=200>
+      <img src="images/jump9.jpg" width=200 height=200>
+      <img src="images/jump10.jpg" width=200 height=200>
+      <img src="images/jump11.jpg" width=200 height=200>
+      <img src="images/jump12.jpg" width=200 height=200>
+      <img src="images/jump13.jpg" width=200 height=200>
+      <img src="images/jump14.jpg" width=200 height=200>
+      <img src="images/jump15.jpg" width=200 height=200>
+      <img src="images/jump16.jpg" width=200 height=200>
+      <img src="images/jump17.jpg" width=200 height=200>
+      <img src="images/jump18.jpg" width=200 height=200>
+    </div>
+    <p> <strong>hehe</strong></p>
+    <p>I also have a really crazy popular successful amazing (or at least I
+      call it that) VLOG CHANNEL!!!
+    <a href="https://www.youtube.com/channel/UCMLGjZDRxhqHeeJYgxm3Abw" class="email">
+    @architasarchannel</a> Shoutout to my 11 subscribers (thx to those 11
+    email accounts I have). Check out some of my videos to see me sitting the
+    library, talking to myself while walking around, or eating cereal out of a
+    ziploc bag. Love #college.</p>
+    <div class="vlog">
+      <a href="https://www.youtube.com/channel/UCMLGjZDRxhqHeeJYgxm3Abw" class="email">
+        <img src="images/vlog.png" width=1082 height=195></a>
+    </div>
+    </div>
+  </div>
+
+  <div class="ending">
+    <p>Alas, my webpage comes to an end.</p>
+    <img src="images/little2.jpeg" width=30 height=25> <p>
+    <img src="images/little2.jpeg" width=60 height=50> <p>
+    <img src="images/little2.jpeg" width=120 height=100> <p>
+    <img src="images/little2.jpeg" width=240 height=200> <p>
+    <p>But it doesn't have to be over yet! <a href="mailto:archita.n.harathi.22@dartmouth.edu"
+    class="email">Email me</a>, call me, text me, <a href="https://www.youtube.com/channel/UCMLGjZDRxhqHeeJYgxm3Abw" class="email">
+      comment on my vlogs</a>, heck even send me a written letter, or come back and visit!
+      You are always welcome! Thanks for visiting! </p>
+  </div>
+
+  <div class="footer">
+    <div class="footertext">Archita Harathi</div>
+    <!-- blank divs for spacing -->
+    <div class="footertext"> </div>
+    <div class="footertext"><a href="mailto:archita.n.harathi.22@dartmouth.edu"
+    class="email">archita.n.harathi.22@dartmouth.edu</a></div>
+    <!-- blank divs for spacing -->
+    <div class="footertext"> </div>
+    <div class="footertext">503-915-7105</div>
+  </div>
+
+  <div class="button">
+    <a href="#top" class="top">Back to Top!</a>
+  </div>
+
+
+  <!-- <button onlick="topFunction()" id="button" title="go to top">Back to Top!</button> -->
+
+  </body>
+
+  <script>
+    var coll1 = document.getElementsByClassName("collapsible1")
+    var i;
+
+    for (i = 0; i < coll1.length; i++) {
+      coll1[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var collapsecontent = this.nextElementSibling;
+        if (collapsecontent.style.display === "block") {
+          collapsecontent.style.display = "none";
+        } else {
+          collapsecontent.style.display = "block";
+        }
+      });
+    }
+
+    // var coll2 = document.getElementsByClassName("collapsible2")
+    // var i;
+    //
+    // for (i = 0; i < coll2.length; i++) {
+    //   coll2[i].addEventListener("click", function() {
+    //     this.classList.toggle("active");
+    //     var collapsecontent = this.nextElementSibling;
+    //     if (collapsecontent.style.display === "block") {
+    //       collapsecontent.style.display = "none";
+    //     } else {
+    //       collapsecontent.style.display = "block";
+    //     }
+    //   });
+    // }
+    // window.onscroll = function() {scrollFunction()};
+    //
+    // function scrollFunction() {
+    //   if (document.body.scrollTop) > 50 || document.documentElement.scrollTop > 50) {
+    //     document.getElementById("button").style.display = "block";
+    //   } else {
+    //     document.getElementById("button").style.display = "none";
+    //   }
+    //
+    // function topFunction() {
+    //   document.body.scrollTop = 0;
+    //   document.documentElement.scrollTop = 0;
+    // }
+
+  </script>
+
+</hmtl>

@@ -1,0 +1,230 @@
+<!-- specific help from
+https://www.tutorialrepublic.com/faq/how-to-change-image-on-hover-with-css.php
+https://www.w3schools.com/css/tryit.asp?filename=trycss_table_border_divider
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_timeline
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
+https://codepen.io/shayhowe/pen/Fvjnf
+https://css-tricks.com/the-shapes-of-css/
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_collapsible
+https://stackoverflow.com/questions/32102747/how-to-make-a-back-to-top-button-using-css-and-html-only
+https://www.w3schools.com/howto/howto_js_scroll_to_top.asp-->
+
+
+
+
+ <!DOCTYPE html>
+ <hmtl>
+
+  <head>
+    <title>architaharathi.me</title>
+    <!-- <link rel="stylesheet" href="assets/stylesheets/main.css"> -->
+    <style type = "text/css">
+
+      * {
+        font-family: "Arial", Arial, sans-serif;
+      }
+
+      .header {
+        text-align: center;
+        font-family: "Arial", Arial, sans-serif;
+        padding: 100px;
+      }
+
+      .header h1{
+        font-size: 110px;
+      }
+
+      .header h4{
+        font-size: 25px;
+        font-style: normal;
+      }
+
+      h4 {
+        font-size: 25px;
+        font-style: italic;
+      }
+
+      h3 {
+        font-size: 30px;
+      }
+
+      .aboutme{
+        background-color: #FFC9F9;
+        padding: 50px;
+      }
+
+      .education{
+        background-color: #dacfff;
+        padding: 50px;
+      }
+
+      .work{
+        background-color: #c1fcc1;
+        padding: 50px;
+      }
+
+      .activities{
+        background-color: #9DD9D2;
+        padding: 50px;
+      }
+
+      .service{
+        background-color: #FFB367;
+        padding: 50px;
+      }
+
+      .funfacts{
+        background-color: #fefba8;
+        padding: 50px;
+      }
+
+      .ending{
+        padding: 50px;
+        text-align: center;
+      }
+
+      .navbar{
+        text-align: center;
+      }
+
+      .act_pics{
+        text-align: center;
+        height: 1300px;
+      }
+
+      a.email{
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a.email:hover{
+        color: blue;
+      }
+
+      a.top{
+        text-decoration: none;
+        color: inherit;
+      }
+
+      a.top:hover{
+        color: black;
+      }
+
+      p {
+        font-size: 20px;
+      }
+
+      .work p{
+        font-size: 20px;
+      }
+
+      /* the next three styles allow the navbar pictures to swap when hovering */
+      .navswitch{
+        position: relative;
+        display: inline-block;
+      }
+
+      .navswitch .img-top{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .navswitch:hover .img-top{
+        display: inline;
+      }
+
+      .footertext{
+        font-size: 15px;
+        margin-left: 20px;
+        line-height: 45px;
+      }
+
+      .footer{
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+        background-color: #ffffff;
+        position: fixed;
+        display: flex;
+        justify-content: space-evenly;
+        z-index: 1;
+      }
+
+
+    </style>
+  </head>
+
+  <body>
+
+  <a name="top"></a>
+
+  <div class="header">
+      <h1>Archita Harathi</h1>
+      <div class="subheader">
+        <h4>Portland, OR   |
+        <a href="mailto:archita.n.harathi.22@dartmouth.edu"
+        class="email">archita.n.harathi.22@dartmouth.edu</a> | 503-915-7105</h4>
+      </div>
+  </div>
+
+  <div class="navbar">
+
+    <!-- profile picture swap when hover -->
+    <a href="html/aboutme.html" class="navswitch">
+      <img src="images/prof_sized.jpg" alt="pink" width=420px height=280px>
+      <img src="images/prof_pink.png" class="img-top" alt="profile" width=420px height=280px>
+    </a>
+
+    <!-- pic of Dartmouth -->
+    <a href="html/education.html" class="navswitch">
+        <img src="images/ed_sized.jpg" alt="purple" width=420px height=280>
+        <img src="images/ed_purp.png" class="img-top" alt="education" width=420px height=280px>
+    </a>
+
+    <!-- pic of MUN -->
+    <a href="html/work.html" class="navswitch">
+      <img src="images/work_sized.jpg" alt="green" width=420 height=280>
+      <img src="images/work_green.png" class="img-top" alt="work" width=420px height=280px>
+    </a>
+
+    <!-- line break in navbar -->
+    <p></p>
+
+    <!-- pic of service -->
+    <a href="html/activities.html" class="navswitch">
+      <img src="images/service_sized.jpg" width=420 height=280>
+      <img src="newimages/nav_activitiesandprojects.png" class="img-top" alt="act" width=420px
+      height=280px>
+    </a>
+    <!-- pic of dance -->
+    <a href="html/portfolio.html" class="navswitch">
+      <img src="images/dance_sized.jpg" width=420 height=280>
+      <img src="newimages/nav_designportfolio.png" class="img-top" alt="serv" width=420px
+      height=280px>
+    </a>
+    <!-- pic of minime -->
+    <a href="#funfacts" class="navswitch">
+      <img src="images/fun_sized.jpg" width=420 height=280>
+      <img src="images/fun_yell.png" class="img-top" alt="fun" width=420px
+      height=280px>
+    </a>
+  </div>
+
+  <p style="margin-bottom: 5%;"></p>
+
+  <!-- footer -->
+  <div class="footer">
+    <div class="footertext">Archita Harathi</div>
+    <!-- blank divs for spacing -->
+    <div class="footertext"> </div>
+    <div class="footertext"><a href="mailto:archita.n.harathi.22@dartmouth.edu"
+    class="email">archita.n.harathi.22@dartmouth.edu</a></div>
+    <!-- blank divs for spacing -->
+    <div class="footertext"> </div>
+    <div class="footertext">503-915-7105</div>
+  </div>
+
+
+
+</hmtl>

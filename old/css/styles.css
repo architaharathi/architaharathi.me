@@ -1,0 +1,160 @@
+* {
+  font-family: "Arial", Arial, sans-serif;
+}
+
+.header {
+  text-align: center;
+  font-family: "Arial", Arial, sans-serif;
+  padding: 100px;
+}
+
+.header h1{
+  font-size: 110px;
+}
+
+.header h4{
+  font-size: 25px;
+  font-style: normal;
+}
+
+h4 {
+  font-size: 25px;
+  font-style: italic;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.aboutme{
+  background-color: #FFC9F9;
+  padding: 50px;
+}
+
+.education{
+  background-color: #dacfff;
+  padding: 50px;
+}
+
+.work{
+  background-color: #c1fcc1;
+  padding: 50px;
+}
+
+.activities{
+  background-color: #9DD9D2;
+  padding: 50px;
+}
+
+.service{
+  background-color: #FFB367;
+  padding: 50px;
+}
+
+.funfacts{
+  background-color: #fefba8;
+  padding: 50px;
+}
+
+.ending{
+  padding: 50px;
+  text-align: center;
+}
+
+.navbar{
+  text-align: center;
+}
+
+.act_pics{
+  text-align: center;
+  height: 1300px;
+}
+
+a.email{
+  text-decoration: none;
+  color: inherit;
+}
+
+a.email:hover{
+  color: blue;
+}
+
+a.top{
+  text-decoration: none;
+  color: inherit;
+}
+
+a.top:hover{
+  color: black;
+}
+
+p {
+  font-size: 20px;
+}
+
+.work p{
+  font-size: 20px;
+}
+
+/* the next three styles allow the navbar pictures to swap when hovering */
+.navswitch{
+  position: relative;
+  display: inline-block;
+}
+
+.navswitch .img-top{
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.navswitch:hover .img-top{
+  display: inline;
+}
+
+.footertext{
+  font-size: 15px;
+  margin-left: 20px;
+  line-height: 45px;
+}
+
+.footer{
+  left: 0;
+  bottom: 0px;
+  width: 100%;
+  background-color: #ffffff;
+  position: fixed;
+  display: flex;
+  justify-content: space-evenly;
+  z-index: 1;
+}
+
+h2 {
+  margin-right: 75%;
+  font-size: 35px;
+  text-align: left;
+  width: 100%
+}
+
+table {
+  border-collapse: collapse;
+  width: 75%;
+  margin-bottom: 20px;
+  table-layout: fixed;
+  margin-left: 12.5%;
+}
+
+th, td {
+  padding: 20px;
+  text-align: left;
+  /* border-bottom: 1px solid black; */
+  font-size: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: white;
+}
+
+tr:nth-child(odd) {
+  background-color: #F0ECFF;
+}
